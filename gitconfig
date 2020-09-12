@@ -1,0 +1,8 @@
+[user]
+	email = jack.binysh@gmail.com
+	name = jackbinysh
+[core]
+	editor = vim
+	autocrlf = false
+[github]
+  user = jackbinysh
