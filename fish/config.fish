@@ -15,3 +15,19 @@ cd (cat ~/.whereami)
  if test -f /usr/share/autojump/autojump.fish;
 	source /usr/share/autojump/autojump.fish;
 end
+
+# the rust installer doesn't do this nicely for fish, see
+#https://github.com/rust-lang/rustup/issues/478
+set PATH $HOME/.cargo/bin $PATH
+
+#exa
+if command -v exa > /dev/null
+	abbr -a l 'exa'
+	abbr -a ls 'exa'
+	abbr -a ll 'exa -l'
+	abbr -a la 'exa -la'
+else
+	abbr -a l 'ls'
+	abbr -a ll 'ls -l'
+	abbr -a la 'ls -la'
+end
