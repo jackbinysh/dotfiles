@@ -1,6 +1,3 @@
-# enable vim mode by default
-fish_vi_key_bindings
-
 # fzf
 set -x FZF_DEFAULT_OPTS "--layout=reverse --height 40%"
 set -x FZF_DEFAULT_COMMAND "rg --files --glob '!.git'"
@@ -24,10 +21,21 @@ set PATH $HOME/.cargo/bin $PATH
 if command -v exa > /dev/null
 	abbr -a l 'exa'
 	abbr -a ls 'exa'
-	abbr -a ll 'exa -l'
+  abbr -a ll 'exa -lrs changed'
 	abbr -a la 'exa -la'
+
 else
 	abbr -a l 'ls'
 	abbr -a ll 'ls -l'
 	abbr -a la 'ls -la'
 end
+
+abbr -a o 'open'
+
+
+
+# set the key bindings
+set -g fish_key_bindings hybrid_bindings
+# enable vim mode by default
+#fish_vi_key_bindings
+#fish_default_key_bindings

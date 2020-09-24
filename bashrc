@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# note I am using fish currently, see the bottom of this file
+########
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -196,3 +199,8 @@ _fzf_compgen_dir() {
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+
+###########
+
+exec fish
