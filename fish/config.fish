@@ -21,7 +21,8 @@ set PATH $HOME/.cargo/bin $PATH
 if command -v exa > /dev/null
 	abbr -a l 'exa'
 	abbr -a ls 'exa'
-  abbr -a ll 'exa -lrs changed'
+  abbr -a ll 'exa -l'
+  abbr -a lt 'exa -lrs changed'
 	abbr -a la 'exa -la'
 
 else
